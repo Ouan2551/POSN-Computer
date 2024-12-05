@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="&#3586;&#3657;&#3629; 4"/>
+        <attribute name="authors" value="Windows 11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-02 03:28:24 PM"/>
+        <attribute name="created" value="V2luZG93cyAxMTtIUDsyMDI0LTEwLTAyOzAzOjE5OjA3IFBNOzIzMDQ="/>
+        <attribute name="edited" value="V2luZG93cyAxMTtIUDsyMDI0LTEwLTAyOzAzOjI4OjI0IFBNOzE7MjQxMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hours, minutes, prize, prize1, prize2" type="Integer" array="False" size=""/>
+            <input variable="hours"/>
+            <input variable="minutes"/>
+            <if expression="hours == 1">
+                <then>
+                    <assign variable="prize1" expression="0"/>
+                    <output expression="&quot;0 bath&quot;" newline="True"/>
+                    <if expression="minutes == 0">
+                        <then>
+                            <assign variable="prize2" expression="0"/>
+                        </then>
+                        <else>
+                            <assign variable="prize2" expression="30"/>
+                        </else>
+                    </if>
+                    <assign variable="prize" expression="prize1 + prize2"/>
+                </then>
+                <else>
+                    <assign variable="prize1" expression="(hours*30)-30"/>
+                    <if expression="minutes == 0">
+                        <then>
+                            <assign variable="prize2" expression="0"/>
+                        </then>
+                        <else>
+                            <assign variable="prize2" expression="30"/>
+                        </else>
+                    </if>
+                    <assign variable="prize" expression="prize1 + prize2"/>
+                    <output expression="prize" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

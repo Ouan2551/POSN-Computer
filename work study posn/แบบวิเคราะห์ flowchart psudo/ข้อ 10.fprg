@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="&#3586;&#3657;&#3629; 10"/>
+        <attribute name="authors" value="Windows 11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-03 08:24:41 AM"/>
+        <attribute name="created" value="V2luZG93cyAxMTtIUDsyMDI0LTEwLTAyOzA0OjEyOjQ0IFBNOzIyOTk="/>
+        <attribute name="edited" value="V2luZG93cyAxMTtIUDsyMDI0LTEwLTAzOzA4OjI0OjQxIEFNOzI7MjM5OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <assign variable="number" expression="0"/>
+            <while expression="number != 100">
+                <if expression="number % 3 == 0 || number % 5 == 0">
+                    <then>
+                        <if expression="number % 2 == 0">
+                            <then/>
+                            <else>
+                                <output expression="number" newline="True"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="number" expression="number + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

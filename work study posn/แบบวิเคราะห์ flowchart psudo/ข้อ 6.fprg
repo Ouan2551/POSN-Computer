@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="&#3586;&#3657;&#3629; 6"/>
+        <attribute name="authors" value="Windows 11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-03 08:28:18 AM"/>
+        <attribute name="created" value="V2luZG93cyAxMTtIUDsyMDI0LTEwLTAyOzAzOjM5OjA0IFBNOzIzMDM="/>
+        <attribute name="edited" value="V2luZG93cyAxMTtIUDsyMDI0LTEwLTAzOzA4OjI4OjE4IEFNOzI7MjQwNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sex" type="String" array="False" size=""/>
+            <declare name="weight, height" type="Integer" array="False" size=""/>
+            <input variable="sex"/>
+            <input variable="weight"/>
+            <input variable="height"/>
+            <if expression="sex == &quot;male&quot;">
+                <then>
+                    <if expression="weight &gt; (height - 100)">
+                        <then>
+                            <output expression="&quot;Please exercise&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Very healthy&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="weight &gt; (height - 110)">
+                        <then>
+                            <output expression="&quot;Please exercise&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Very healthy&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

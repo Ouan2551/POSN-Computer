@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="&#3586;&#3657;&#3629;&#3607;&#3637;&#3656; 7"/>
+        <attribute name="authors" value="Windows 11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-02 03:48:44 PM"/>
+        <attribute name="created" value="V2luZG93cyAxMTtIUDsyMDI0LTEwLTAyOzAzOjQ1OjIyIFBNOzIzMDA="/>
+        <attribute name="edited" value="V2luZG93cyAxMTtIUDsyMDI0LTEwLTAyOzAzOjQ4OjQ0IFBNOzE7MjQxNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <assign variable="number" expression="19"/>
+            <while expression="number &gt;= 0">
+                <output expression="number" newline="True"/>
+                <assign variable="number" expression="number - 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

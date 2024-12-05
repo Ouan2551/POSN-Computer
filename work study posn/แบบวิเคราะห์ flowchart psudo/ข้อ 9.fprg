@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="&#3586;&#3657;&#3629; 9"/>
+        <attribute name="authors" value="Windows 11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-02 04:11:14 PM"/>
+        <attribute name="created" value="V2luZG93cyAxMTtIUDsyMDI0LTEwLTAyOzAzOjU1OjM2IFBNOzIzMDY="/>
+        <attribute name="edited" value="V2luZG93cyAxMTtIUDsyMDI0LTEwLTAyOzA0OjExOjE0IFBNOzE7MjQwMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, result, lap, number" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="lap" expression="1"/>
+            <assign variable="number" expression="1"/>
+            <assign variable="result" expression="1"/>
+            <while expression="lap != n">
+                <assign variable="result" expression="result * (lap + 1)"/>
+                <assign variable="number" expression="number + 1"/>
+                <assign variable="lap" expression="lap + 1"/>
+            </while>
+            <output expression="result" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="&#3586;&#3657;&#3629; 5"/>
+        <attribute name="authors" value="Windows 11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-02 03:39:01 PM"/>
+        <attribute name="created" value="V2luZG93cyAxMTtIUDsyMDI0LTEwLTAyOzAzOjI4OjQ0IFBNOzIzMDU="/>
+        <attribute name="edited" value="V2luZG93cyAxMTtIUDsyMDI0LTEwLTAyOzAzOjM2OjQzIFBNOzM7V2luZG93cyAxMTtIUDsyMDI0LTEwLTAyOzAzOjE5OjA3IFBNOzQ3NzY="/>
+        <attribute name="edited" value="V2luZG93cyAxMTtIUDsyMDI0LTEwLTAyOzAzOjM5OjAxIFBNOzI7MjQwOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="billmoney, hours, minutes, prize1, prize2, prize" type="Integer" array="False" size=""/>
+            <input variable="billmoney"/>
+            <input variable="hours"/>
+            <input variable="minutes"/>
+            <if expression="billmoney &gt; 1000">
+                <then>
+                    <if expression="hours == 4">
+                        <then>
+                            <assign variable="prize1" expression="0"/>
+                        </then>
+                        <else>
+                            <assign variable="prize1" expression="(hours * 30) - 120"/>
+                        </else>
+                    </if>
+                    <if expression="minutes == 0">
+                        <then>
+                            <assign variable="prize2" expression="0"/>
+                        </then>
+                        <else>
+                            <assign variable="prize2" expression="30"/>
+                        </else>
+                    </if>
+                    <assign variable="prize" expression="prize1 + prize2"/>
+                </then>
+                <else>
+                    <if expression="hours == 1">
+                        <then>
+                            <assign variable="prize1" expression="0"/>
+                        </then>
+                        <else>
+                            <assign variable="prize1" expression="(hours*30)-30"/>
+                        </else>
+                    </if>
+                    <if expression="minutes == 0">
+                        <then>
+                            <assign variable="prize2" expression="0"/>
+                        </then>
+                        <else>
+                            <assign variable="prize2" expression="30"/>
+                        </else>
+                    </if>
+                    <assign variable="prize" expression="prize1 + prize2"/>
+                </else>
+            </if>
+            <output expression="prize" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
