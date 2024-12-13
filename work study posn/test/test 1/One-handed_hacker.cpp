@@ -19,6 +19,10 @@ char check_left(string a, int size)
     {
         return '1';
     }
+    else if (chk_left > 0)
+    {
+        return '3';
+    }
     else
     {
         return 0;
@@ -43,6 +47,10 @@ char check_right(string a, int size)
     {
         return '2';
     }
+    else if (chk_right > 0)
+    {
+        return '4';
+    }
     else
     {
         return 0;
@@ -66,15 +74,17 @@ int main()
         }
         else if(m > 1)
         {
-            if (check_left(a[i], m) == '1' && check_right(a[i], m) == '2')
+            char chk_left_if = check_left(a[i], m);
+            char chk_right_if = check_right(a[i], m);
+            if (chk_left_if == '3' && chk_right_if == '4')
             {
                 cout << "NONE" << endl;
             }
-            else if (check_left(a[i], m) == '1')
+            else if (chk_left_if == '1')
             {
                 cout << "LEFT" << endl;
             }
-            else if (check_right(a[i], m) == '2')
+            else if (chk_right_if == '2')
             {
                 cout << "RIGHT" << endl;
             }
@@ -86,3 +96,7 @@ int main()
 //problem and how fix
 //use char instead string data types because return single character
 //not output all of LEFT RIGHT NONE text
+
+//now problem can all fix by use else if in function
+//check left and right because have somecharacter use left and right
+//hand to typing
