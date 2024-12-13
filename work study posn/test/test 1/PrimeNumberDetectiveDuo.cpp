@@ -1,32 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
-    int n;
-    cin >> n;
-    int lap = 0;
-    for (int i = 2; i < n; i++)
+    ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+    int n; cin >> n;
+    vector<int> prime;
+    for (int i = 1; i <= n; i++)
     {
         bool isprime = true;
-        for (int j = 2; j*j < i*i; j++)
+        for (int j = 2; j < i; j++)
         {
             if (i % j == 0)
             {
                 isprime = false;
-                break;
             }
         }
-
         if (isprime == true)
         {
-            for (int m = 0; m < n; m++)
-            {
-                lap++;
-                break;
-            }
+            
+            cout << "i : " << i << endl;
         }
     }
-    cout << lap/2 ;
+    
     return 0;
 }
