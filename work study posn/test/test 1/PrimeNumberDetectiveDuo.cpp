@@ -17,10 +17,24 @@ int main()
         }
         if (isprime == true)
         {
-            
-            cout << "i : " << i << endl;
+            prime.push_back(i);
+            // use for check test find prime loop
+            // cout << "i : " << i << endl;
         }
     }
-    
+
+    // use for check size vector
+    int vector_size = prime.size();
+    // cout << vector_size;
+
+    int prime_duo = 0;
+    for (int i = 0; i < vector_size; i++)
+    {
+        if (abs(prime[i] - prime[i+1]) == 2)
+        {
+            prime_duo++;
+        }
+    }
+    cout << prime_duo << endl;
     return 0;
 }
