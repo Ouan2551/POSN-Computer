@@ -3,25 +3,18 @@ using namespace std;
 int main()
 {
     ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    int count = 0; cin >> count;
-    for (int i = 2; i <= count; i++)
+    int count; cin >> count;
+    for (int i = 0; i < count; i++)
     {
-        bool prime_number = true;
-        for (int j = 2; j < i; j++)
+        for (int j = count - i + 1; j > 0; j--)
         {
-            if (i % j == 0)
-            {
-                prime_number = false; break;
-            }
+            cout << " ";
         }
-        if (prime_number == true)
+        for (int j = 0; j <= i; j++)
         {
-            cout << i << " is prime number." << endl;
+            cout << "*";
         }
-        else if (prime_number == false)
-        {
-            cout << i << "isn't prime number." << endl;
-        }
+        cout << endl;
     }
     return 0;
 }
