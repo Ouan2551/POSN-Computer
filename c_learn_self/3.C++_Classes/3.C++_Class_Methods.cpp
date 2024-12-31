@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// class methods just creat function in class
 class Myclass
 {
     // you can creat function in class like creat outside function (easily to do blud)
@@ -11,12 +11,12 @@ class Myclass
         }
 }; // don't forget semicolon overthere
 
-
 class People // The class
 {
 public:              // Access specifier
     void myMethod();   // Method/function declaration
 };
+
 
 // Method/function definition outside the class
 void People::myMethod()
