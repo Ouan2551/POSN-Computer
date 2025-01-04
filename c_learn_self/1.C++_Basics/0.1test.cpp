@@ -2,52 +2,29 @@
 using namespace std;
 int main()
 {
-    int count; cin >> count;
-    for (int i = 0; i < count; i++)
+    ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+    int n; cin >> n;
+    for (int i = 0; i < n; i++)
     {
-        cout << "*";
-    }
-    cout << endl;
-
-    for (int i = -count + 6; i < 0; i++)
-    {
-        cout << "*";
-        for (int j = -count + 6; j < count - 6; j++)
+        int count = 0;
+        for (int j = -n; j < n+1; j++)
         {
-            if (abs(i) == abs(j))
+            // cout << "(" << i << "," << j << ")";
+            if (abs(i) == abs(j) || abs(i) >= abs(j))
             {
-                cout << "*";
+                cout << "* ";
+                count++;
+                if (count == i + 1)
+                {
+                    break;
+                }
             }
             else
             {
-                cout << "-";
+                cout << " ";
             }
         }
-        cout << "*";
-        cout << endl;
-    }
-
-    for (int i = -count + 6; i < count - 6; i++)
-    {
-        cout << "*";
-        for (int j = -count + 6; j < count - 5; j++)
-        {
-            if (abs(i) == abs(j))
-            {
-                cout << "*";
-            }
-            else
-            {
-                cout << "-";
-            }
-        }
-        cout << "*";
-        cout << endl;
-    }
-
-    for (int i = 0; i < count; i++)
-    {
-        cout << "*";
+        cout << "\n";
     }
     return 0;
 }
