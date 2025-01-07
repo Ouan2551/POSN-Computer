@@ -1,23 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main()
-{ 
+{
     ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    int count; cin >> count;
-    for (int i = 0; i < count; i++)
+    string txt; getline(cin, txt); int m = txt.size();
+    for (int i = m - 1; i >= 0; i--)
     {
-        for (int j = 0; j < count; j++)
-        {
-            if (abs(i) == abs(j))
-            {
-                cout << "*";
-            }
-            else
-            {
-                cout << " ";
-            }
-        }
-        cout << "\n";
+        cout << txt[i];
     }
-    return 0;
 }
