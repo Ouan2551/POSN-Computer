@@ -4,45 +4,59 @@ int main()
 {
     ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
     int count; cin >> count;
-    for (int i = -count; i < -1; i++)
+    for (int i = 0; i < count; i++)
     {
-        for (int j = -count; j < count + 1; j++)
-        {
-            // cout << "(" << i << "," << j << ")";
-            if (abs(i) == abs(j))
-            {
-                cout << "*";
-            }
-            else if (abs(i) == 1)
-            {
-                break;
-            }
-            else
-            {
-                cout << "-";
-            }
-        }
-        cout << endl;
+        cout << "*";
     }
-    for (int i = 2; i < count; i++)
+    cout << "\n";
+    for (int i = -count + 5; i < -1; i++)
     {
-        for (int j = -count; j < count + 1; j++)
+        cout << "*";
+        for (int j = -count + 5; j < count - 4; j++)
         {
             // cout << "(" << i << "," << j << ")";
             if (abs(i) == abs(j))
             {
                 cout << "*";
             }
-            else if (abs(i) == 1)
+            else if (abs(j) == 1 || abs(j) == 0)
             {
-                break;
+                continue;
             }
             else
             {
                 cout << "-";
             }
         }
-        cout << endl;
+        cout << "*";
+        cout << "\n";
+    }
+    for (int i = 2; i < count - 4; i++)
+    {
+        cout << "*";
+        for (int j = -count + 5; j < count - 4; j++)
+        {
+            // cout << "(" << i << "," << j << ")";
+            if (abs(i) == abs(j))
+            {
+                cout << "*";
+            }
+            else if (abs(j) == 1 || abs(j) == 0)
+            {
+                continue;
+            }
+            else
+            {
+                cout << "-";
+            }
+        }
+        cout << "*";
+        cout << "\n";
+    }
+
+    for (int i = 0; i < count; i++)
+    {
+        cout << "*";
     }
     return 0;
 }
