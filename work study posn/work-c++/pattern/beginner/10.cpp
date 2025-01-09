@@ -7,12 +7,17 @@ int main ()
     cin >> n;
     for (int i = 0; i <= n-1; i++)
     {
+        int count = 0;
         for (int j = n; j >= -n+1; j--)
         {
             // cout << "(" << i << "," << j << ")";
             if (abs(i) == abs(j) || (abs(i) >= abs(j) && (abs(j)-abs(i) != 2)))
             {
-                cout << "*";
+                cout << "* "; count++;
+                if (count == i + 1)
+                {
+                    break;
+                }
             }
             else
             {
