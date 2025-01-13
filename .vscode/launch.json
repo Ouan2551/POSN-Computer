@@ -33,8 +33,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/เซฟสิ่งสำคัญบลาๆอ้วน/สอวน.คอม/c_learn_self",
-      "program": "d:/เซฟสิ่งสำคัญบลาๆอ้วน/สอวน.คอม/c_learn_self/build/Debug/outDebug",
+      "cwd": "d:/Important files Nannaphat/coding/Posn-Computer/work study posn/work-c++/morning test",
+      "program": "d:/Important files Nannaphat/coding/Posn-Computer/work study posn/work-c++/morning test/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
