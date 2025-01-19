@@ -2,6 +2,7 @@
 using namespace std;
 int main()
 {
+    ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
     // For loop
     // structure for loop
     // for (start, stop, increase_value)
@@ -44,4 +45,6 @@ int main()
     {
         cout << i << "\n";
     }
+
+    return 0;
 }
