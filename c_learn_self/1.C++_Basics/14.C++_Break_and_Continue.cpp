@@ -13,6 +13,8 @@ int main()
     cout << i << "\n";
     }
 
+
+
     // continue => skip loop this process
         for (int i = 0; i < 10; i++)
     {
