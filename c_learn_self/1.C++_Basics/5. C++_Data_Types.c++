@@ -44,7 +44,7 @@ int main()
     //float and double => whole number with decimals
         //float vs double => float only six or seven decimal digits
                             //double about 15 decimal digits
-    /*Scientifin Numbers => floating point number can be this
+    /*Scientific Numbers => floating point number can be this
     with "e" and power by 10*/
     
     //Example Scientific Numbers
