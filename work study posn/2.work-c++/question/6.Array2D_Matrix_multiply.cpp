@@ -3,40 +3,41 @@ using namespace std;
 int main()
 {
     ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    int count; cin >> count; string a[count];
-    string txt = "LuvYou"; 
-    for (int i = 0; i < count; i++)
+    int m1, m2, n1, n2; cin >> m1 >> n1; int a[m1][n1] = {0};
+    m1 = n1 = m2 = n2 = 0;
+    for (int i = 0; i < m; i++)
     {
-        cin >> a[i];
+        for (int j = 0; j < n; j++)
+        {
+            cin >> a[i][j];
+        }
     }
 
-    // check text
-    for (int i = 0; i < count; i++)
+    cin >> m2 >> n2; int b[m2][n2] = {0};
+    for (int i = 0; i < m; i++)
     {
-        string chk_text = a[i]; int chk_nums = chk_text.size();
-        int equal = 0;
-        for (int j = 0; j < chk_nums; j++)
+        for (int j = 0; j < n; j++)
         {
-            for (int k = 0; k < 6; k++)
+            cin >> b[i][j];
+        }
+    }
+
+    // result
+    if (n1 == m2)
+    {
+        int c[m1][n2] = {0};
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
             {
-                if (chk_text[j] == txt[k])
-                {
-                    equal++;
-                }
+                c[i][j] == 
             }
         }
-
-        if (equal == chk_nums)
-        {
-            cout << "YES" << '\n';
-        }
-        else
-        {
-            cout << "NO" << '\n';
-        }
-        cout << "Equal : " << equal << '\n';
     }
+    else
+    {
+        cout << "Can not multiply";
+    }
+
     return 0;
 }
-// idea now
-// use if else to continue check next to until complete string
