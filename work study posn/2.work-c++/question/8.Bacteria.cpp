@@ -8,6 +8,5 @@ int main()
     {
         cout << n / 2 << '\n';
     }
-    
     return 0;
 }
