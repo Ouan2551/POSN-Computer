@@ -15,7 +15,7 @@ int main()
 
 
 
-    // continue => skip loop this process
+    // continue => skip this process in loop
         for (int i = 0; i < 10; i++)
     {
         if (i == 4)
