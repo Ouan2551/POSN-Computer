@@ -7,7 +7,7 @@ int main()
     m1 = n1 = m2 = n2 = 0;
     for (int i = 0; i < m1; i++)
     {
-        for (int j = 0; j < n1; j++)
+        for (int j = 0; j < n1; j++)w
         {
             cin >> a[i][j];
         }
