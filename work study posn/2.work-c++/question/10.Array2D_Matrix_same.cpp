@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-void output_matrix(int m, int n, int x, int y, int a, int b)
+void output_matrix(int m, int n, int x, int y, int a[m][n], int b[x][y])
 {
     for (int i = 0; i < m; i++)
     {
