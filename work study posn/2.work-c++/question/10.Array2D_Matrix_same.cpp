@@ -1,67 +1,74 @@
 #include <bits/stdc++.h>
 using namespace std;
-void output_matrix(int m, int n, int x, int y, int a[m][n], int b[x][y])
-{
-    for (int i = 0; i < m; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            cout << a[i][j] << ' ';
-        }
-        cout << '\n';
-    }
-    cout << '\n';
-    for (int i = 0; i < x; i++)
-    {
-        for (int j = 0; j < y; j++)
-        {
-            cout << b[i][j] << ' ';
-        }
-        cout << '\n';
-    }
-}
-
 int main()
 {
     ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    int m, n; cin >> m >> n; int a[m][n];
-    for (int i = 0; i < m; i++)
+    int m, n; cin >> m >> n; vector<int> a; vector<int> b;
+    for (int i = 0; i < m*n; i++)
     {
-        for (int j = 0; j < n; j++)
-        {
-            cin >> a[i][j];
-        }
+        int x; cin >> x;
+        a.push_back(x);
     }
-    int x, y; cin >> x >> y; int b[x][y];
-    for (int i = 0; i < x; i++)
+    int z, x = 0; cin >> z >> x;
+    for (int i = 0; i < z*x; i++)
     {
-        for (int j = 0; j < y; j++)
-        {
-            cin >> b[i][j];
-        }
+        int y; cin >> y;
+        b.push_back(y);
     }
-
-    if (m == x && n == y)
+    if (m == z && n == x)
     {
-        for (int i = 0; i < m; i++)
+        for (int i = 0; i < m*n; i++)
         {
-            for (int j = 0; j < n; j++)
+            if (a[i] != b[i])
             {
-                if (a[i][j] != b[i][j])
+                for (int i = 0; i < z*x; i++)
                 {
-                    output_matrix(m, n, x, y, a[m][n], b[x][y]);
-                    cout << "A!=B";
-                    return 0;
+                    cout << a[i] << ' ';
+                    if (i == m - 1)
+                    {
+                        cout << '\n';
+                    }
                 }
+                cout << '\n';
+                cout << "A!=B";
+                return 0;
+            }
+            
+        }
+        for (int i = 0; i < z*x; i++)
+        {
+            cout << a[i] << ' ';
+            if (i == m - 1)
+            {
+                cout << '\n';
             }
         }
-        output_matrix(m, n, x, y, a[m][n], b[x][y]);
+        cout << '\n';
         cout << "A==B";
+        return 0;
     }
     else
     {
-        output_matrix(m, n, x, y, a[m][n], b[x][y]);
+        for (int i = 0; i < m*n; i++)
+        {
+            cout << a[i] << ' ';
+            if (i == m - 1)
+            {
+                cout << '\n';
+            }
+        }
+        cout << '\n';
+        for (int i = 0; i < z*x; i++)
+        {
+            cout << a[i] << ' ';
+            if (i == z - 1)
+            {
+                cout << '\n';
+            }
+        }
+        cout << '\n';
         cout << "A!=B";
     }
+    
     return 0;
 }
