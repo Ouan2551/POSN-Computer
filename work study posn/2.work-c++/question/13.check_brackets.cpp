@@ -1,13 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main()
+string check_brackets(code)
 {
-    ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    int count; cin >> count; string txt[count] = {""};
-    for (int i = 0; i < count; i++)
-    {
-        getline(cin, txt[i]);
-    }
     for (int i = 0; i < count; i++)
     {
         int m = txt[i].size(); string used = txt[i];
@@ -32,5 +26,21 @@ int main()
             cout << "Danger" << '\n';
         }
     }
+    return txt;
+}
+int main()
+{
+    ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+    int count; cin >> count; string code[count] = {""};
+
+    for (int i = 0; i < count; i++)
+    {
+        getline(cin, code[i]);
+    }
+    for (int i = 0; i < count; i++)
+    {
+        cout << check_brackets(code[i]) << '\n';
+    }
+    
     return 0;
 }
