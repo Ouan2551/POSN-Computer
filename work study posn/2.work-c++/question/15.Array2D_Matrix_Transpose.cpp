@@ -20,6 +20,7 @@ int main()
         cout << '\n';
     }
     cout << '\n';
+    int temp = m; m = n; n = temp;
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
