@@ -3,32 +3,32 @@ using namespace std;
 int main()
 {
     ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    int m,n; cin >> m >> n; int a[m][n];
-    for (int i = 0; i < m; i++)
+    int m, n; cin >> m >> n;
+    vector<int> a;
+    for (int i = 0; i < m*n; i++)
     {
-        for (int j = 0; j < n; j++)
-        {
-            cin >> a[i][j];
-        }
+        int num; cin >> num; a.push_back(num);
     }
-    for (int i = 0; i < m; i++)
+    int count = 0;
+    for (int i = 0; i < m*n; i++)
     {
-        for (int j = 0; j < n; j++)
+        if (count % n == 0)
         {
-            cout << a[i][j] << ' ';
+            cout << '\n';
         }
-        cout << '\n';
+        cout << a[i] << ' ';
+        count++;
     }
     cout << '\n';
-    int temp = m; m = n; n = temp;
-    for (int i = 0; i < m; i++)
+    int count = 0;
+    for (int i = 0; i < m*n; i++)
     {
-        for (int j = 0; j < n; j++)
+        if (count % n == 0)
         {
-            cout << a[i][j] << ' ';
+            cout << '\n';
         }
-        cout << '\n';
+        cout << a[i] << ' ';
+        count++;
     }
-    
     return 0;
 }
