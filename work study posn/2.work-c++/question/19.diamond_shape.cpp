@@ -1,50 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main()
-{
-    ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    int count; cin >> count;
-    if (count == 3)
+
+int main() {
+    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    int n; cin >> n;
+    for (int i = 0; i < n; i++)
     {
-        cout << "#+#" << '\n';
-        cout << "+++" << '\n';
-        cout << "#+#" << '\n';
-        return 0;
-    }
-    else
-    {
-        for (int i = 0; i <= count - 3; i++)
+        for (int j = 0; j < n; j++)
         {
-            for (int j = -count + 3; j <= count - 3; j++)
-            {
-                // cout << "(" << i << "," << j << ')';
-                if (abs(i) == abs(j) || abs(i) > abs(j))
-                {
-                    cout << '+';
-                }
-                else
-                {
-                    cout << '#';
-                }
-            }
-            cout << '\n';
+            // I not understand this code is from another
+            // think you have area like 7*7
+            // this problem is about odd number
+            // is you want to find center of this area
+            // 7*7 center is (3, 3) is from (7/2, 7/2)
+            if (abs(i - n / 2) + abs(j - n / 2) <= n / 2)
+                cout << '+';
+            else
+                cout << '#';
         }
-        for (int i = -count + 4; i <= 0; i++)
-        {
-            for (int j = -count + 3; j <= count - 3; j++)
-            {
-                // cout << "(" << i << "," << j << ')';
-                if (abs(i) == abs(j) || abs(i) > abs(j))
-                {
-                    cout << '+';
-                }
-                else
-                {
-                    cout << '#';
-                }
-            }
-            cout << '\n';
-        }
+        cout << '\n';
     }
     return 0;
 }
