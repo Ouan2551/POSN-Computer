@@ -1,14 +1,17 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-int gcd(int a, int b) {
-if (b == 0) {
-return a;
-}
-return gcd(b,a%b);
-}
+
 int main() {
-int num1, num2;
-cin >> num1 >> num2;
-cout << gcd(num1, num2) << endl;
-return 0;
+    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    int n; cin >> n;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (abs(i - n / 2) + abs(j - n / 2) <= n / 2)
+                cout << '+';
+            else
+                cout << '#';
+        }
+        cout << '\n';
+    }
+    return 0;
 }
