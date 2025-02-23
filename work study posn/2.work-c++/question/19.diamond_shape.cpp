@@ -15,12 +15,12 @@ int main()
     {
         for (int i = 0; i <= count - 3; i++)
         {
-            for (int j = -count + 4; j <= count - 4; j++)
+            for (int j = -count + 3; j <= count - 3; j++)
             {
                 // cout << "(" << i << "," << j << ')';
                 if (abs(i) == abs(j) || abs(i) > abs(j))
                 {
-                    cout << '*';
+                    cout << '+';
                 }
                 else
                 {
@@ -31,12 +31,12 @@ int main()
         }
         for (int i = -count + 4; i <= 0; i++)
         {
-            for (int j = -count + 4; j <= count - 4; j++)
+            for (int j = -count + 3; j <= count - 3; j++)
             {
                 // cout << "(" << i << "," << j << ')';
                 if (abs(i) == abs(j) || abs(i) > abs(j))
                 {
-                    cout << '*';
+                    cout << '+';
                 }
                 else
                 {
