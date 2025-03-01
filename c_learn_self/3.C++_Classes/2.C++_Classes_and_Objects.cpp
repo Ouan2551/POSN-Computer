@@ -6,7 +6,7 @@ class MyClass {       // The class
   public:             // Access specifier
     int myNum;        // Attribute (int variable)
     string myString;  // Attribute (string variable)
-}; // Don't forget semicolon ";" over there
+}; // Don't forget semicolon ';' over there
 
 class Car {
   public:
@@ -20,9 +20,10 @@ int main()
   ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
   // C++ is associated with classes and objects
-  // example: in real life, a car is an object. The car has attributes, such as weight and color
+  // example: in real life a car is an object
+  // The car has attributes such as weight and color
 
-  // Creat class
+  // Creat class structure(name_class, name_object)
   MyClass myObj;  // Create an object of 
   Car myObj1; // after you creat name of class you can't use same name of class
 
