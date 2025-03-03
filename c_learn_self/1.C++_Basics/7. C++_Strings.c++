@@ -18,8 +18,8 @@ int main()
     cout << fullName << "\n";
 
     //or use this same result
-    string firstName1 = "Prayut";
-    string lastName1 = "Chanocha";
+    string firstName1 = "Jonathan";
+    string lastName1 = "Van";
     string fullName1 = firstName1.append(" ").append(lastName1);
     cout << fullName1 << "\n";
 
@@ -102,5 +102,5 @@ int main()
     char greeting3[] = "Hello";  // C-Style String (an array of characters)
     cout << greeting2 << "\n";
     cout << greeting3 << "\n";
-    //use C-Style Strings becasue it access to functions from C standard library
+    //use C-Style Strings because it access to functions from C standard library
 }
