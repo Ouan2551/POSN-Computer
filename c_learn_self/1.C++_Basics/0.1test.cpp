@@ -1,23 +1,48 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 int main()
 {
-    ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    int num; cin >> num;
-    for (int i = 2; i <= num; i++)
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+
+    int count;
+    cin >> count;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear input buffer
+
+    vector<string> booked; // Ordered list of booked seats
+
+    for (int i = 0; i < count; i++)
     {
-        int chk_nums = i; bool chk = true;
-       frttt for (int j = 0; j < num; j++)
+        string txt;
+        getline(cin, txt);
+
+        if (txt.substr(0, 4) == "book") // Booking case
         {
-            if (chk_nums % j == 0)
+            string seat = txt.substr(5); // Extract seat number
+            booked.push_back(seat); // Store in order
+            cout << "Booked successfully\n";
+        }
+        else if (txt.substr(0, 6) == "cancel") // Cancellation case
+        {
+            string seat = txt.substr(7); // Extract seat number
+            cout << "Cancelled successfully\n";
+
+            // Remove only the FIRST occurrence of seat
+            auto it = find(booked.begin(), booked.end(), seat);
+            if (it != booked.end()) 
             {
-                chk = false; break;
+                booked.erase(it);
             }
         }
-        if (chk == true)
-        {
-            cout << "num : " << chk_nums << '\n';
-        }
     }
+
+    // Print remaining booked seats
+    for (const string &seat : booked)
+    {
+        cout << seat << " ";
+    }
+
     return 0;
 }

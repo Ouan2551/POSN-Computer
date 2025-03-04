@@ -65,6 +65,7 @@ int main()
             cout << "cancelled[j] : " << cancelled[j] << '\n';
             cout << "booked[i+1] : " << booked[i+1] << '\n';
             cout << "cancelled[j+1] : " << cancelled[j+1] << '\n';
+            cout << "___________________" << '\n';
             if (booked[i] == cancelled[j] && booked[i + 1] == cancelled[j+1])
             {
                 booked.erase(booked.begin() + i);
