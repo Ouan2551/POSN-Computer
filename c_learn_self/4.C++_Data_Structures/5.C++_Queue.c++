@@ -1,18 +1,40 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main()
-#define windows ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0)
 {
-    queue <int> Q;
-    Q.push(1);
-    Q.push(2);
-    Q.push(3);
-    cout << Q.front() << " " << Q.back() << endl;
+    ios::sync_with_stdio(0);cout.tie(0);cin.tie(0);
+    // Queue => first in, first out (FIFO)
+    // imagine by compare to people stand in line wait to buy item
 
-    Q.pop();
-    cout << Q.front() << " " << Q.back() << endl;
+    //#include <queue> include for use queue
 
-    cout << Q.size() << endl;
-    Q.empty();
+    // declare queue
+    queue<string> cars; // same as stack you can't add element from declare queue
+
+    // Add elements to the queue
+    cars.push("Volvo");
+    cars.push("BMW");
+    cars.push("Ford");
+    cars.push("Mazda");
+    
+    // access front and back element
+    cout << "Front element : " << cars.front() << '\n';
+    cout << "Back element : " << cars.back() << '\n';
+
+    // change front and back element
+    cars.front() = "Tesla";
+    cars.back() = "Ferrari";
+    cout << "AFTER Front element : " << cars.front() << '\n';
+    cout << "AFTER Back element : " << cars.back() << '\n';
+
+    // Remove element
+    cars.pop();
+    cout << "Front element (after pop first out) : " << cars.front() << '\n';
+
+    // Get size queue
+    cout << "Size queue : " << cars.size() << '\n';
+
+    // Check is empty or not
+    cout << "chk_empty (0 = false, 1 = true) : " << cars.empty() << '\n';
     return 0;
 }
